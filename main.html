@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adamantium Banking, Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--
+      Imports css files for the designs in the web
+    -->
+    <link rel="stylesheet" type="text/css" href="./styles/stylemain.css">
+    <link rel="stylesheet" type="text/css" href="./styles/mainauxiliary.css">
+    <link rel="stylesheet" type="text/css" href="./styles/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./styles/minidata.css">
+    <link rel="stylesheet" type="text/css" href="./styles/animate.css">
+    <!--
+        Script for the Customer Support chat feature
+    -->
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "eaedb0c8-d913-403e-9d33-24bdcdc90455";
+        (function() {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</head>
+
+<body>
+    <!--
+      This is an info that helps users become aware of the existence of the chat support system
+    -->
+    <div class="info">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Info:</strong> Wait for about 5 seconds for the Chat Feature to appear on the lower right side of the screen.
+    </div>
+
+    <!--Navigation Bar for 1st level-->
+    <div class="navbar-1st-level">
+        <a class="scroll" style="background-color: rgb(255, 255, 255); color: black;" href="main.html">Main</a>
+        <a class="scroll" href="banking.html">Banking</a>
+    </div>
+    <!--Navigation Bar for 2nd level-->
+    <div class="navbar">
+        <div class="abilogo" href="main.html">
+            <button>
+                <img src="assets/images/ABI.PNG" alt="logo1" height="30">
+            </button>
+        </div>
+        <!--
+          Navigation bar; auto scrolls to the selected container once clicked
+        -->
+        <a class="scroll" href="#home"><i class="fa fa-fw fa-home" style="margin: 10px; padding: 0px 20px"></i>Home</a>
+        <a class="scroll" href="#about"><i class="fas fa-newspaper" style="margin: 10px; padding: 0px 5px"></i>About</a>
+        <a class="scroll" href="#contacts"><i class="fas fa-phone-square-alt"
+                style="margin: 10px; padding: 0px 5px"></i>Contact</a>
+        <div class="wow slideInRight fadeInRight" data-wow-duration="3s">
+            <!--Login button-->
+            <div class="login button">
+                <lg-button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-user"></i> Login</button>
+            </div>
+            <!--Signup button-->
+            <div class="login button">
+                <lg-button onclick="document.getElementById('signup').style.display='block'" style="width:auto;"><i class="fas fa-user-circle"></i>Sign Up</button>
+            </div>
+            <script src="./scripts/main.js"></script>
+        </div>
+    </div>
+    <!--
+            Floating form of the login button, this only pops up when user clicks signup button
+        -->
+    <div id="id01" class="modal">
+        <form class="form animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" style="color: rgb(211, 59, 32);">&times;</span>
+            </div>
+
+            <div class="log-container">
+                <label for="uname" style="color: rgb(255, 255, 255);"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw" style="color: rgb(255, 255, 255);"> <b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <br><br><button type="submit" style="text-align-last: center;">Login</button>
+                <label style="color: rgb(255, 255, 255);">
+                    <br><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            </div>
+
+            <div class="log-container ">
+                <span class="psw"><a href="#" style="color: rgb(129, 144, 196);">Forgot password?</a></span><br><br>
+                <span class="psw"><a href="#" style="color: rgb(129, 144, 196);">Signup</a></span>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!--
+            Signup section, this only pops up when user clicks signup button
+        -->
+    <div id="signup" class="modal">
+        <form class="form animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal" style="color: rgb(211, 59, 32);">&times;</span>
+            </div>
+
+            <div class="log-container">
+                <label for="su-uname" style="color: rgb(255, 255, 255);"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="su-uname" required>
+                <br>
+                <label for="su-psw" style="color: rgb(255, 255, 255);"> <b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="su-psw" required>
+
+                <label for="su-psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="su-psw-repeat" required>
+
+                <br><br><button type="submit" style="text-align-last: center;">Signup</button>
+                <label style="color: rgb(255, 255, 255);">
+                    <br><input type="checkbox" checked="checked" name="su-remember"> Remember me</label>
+            </div>
+
+            <div class="log-container ">
+                <span class="psw"><a href="#" style="color: rgb(129, 144, 196);">Forgot password?</a></span><br><br>
+                <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!--
+        Home page automatic slideshow pictures
+    -->
+    <div class="w3-content w3-display-container" style="max-width:1920px;" id="home">
+        <img class="mySlides w3-animate-opacity" src="./assets/images/bright-futures.jpg" style="width:100%">
+        <img class="mySlides w3-animate-opacity" src="./assets/images/people.jpg" style="width:100%">
+        <img class="mySlides w3-animate-opacity" src="./assets/images/couple-gadget.jpg" style="width:100%">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+            <!--
+                Button for manual scroll of images
+            -->
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)" style="font-size: 50px;">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)" style="font-size: 50px;">&#10095;</div>
+            <br><br><br><br><br><br><br><br>
+        </div>
+        <script src="./scripts/main.js"></script>
+    </div>
+    <hr><br><br>
+    <hr>
+    <!--
+        "About" section
+    -->
+    <div id="about">
+        <div class="wow fadeInUp" data-wow-duration="3s" data-wow-delay="1s">
+            <div class="ab-container">
+                <div class="welcome-text">
+                    <h1>Adamantium Banking,<br> Inc.
+                    </h1>
+                    <div class="welcome-lg">
+                        <img src="assets/images/blockc.webp">
+                    </div>
+                    <h4>A customer-focused bank that provides complete financial<br> solutions to meet your entire financial needs.</h4><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/min.js"></script>
+    <!--
+      This initializes or activates the script for the div animations
+    -->
+    <script>
+        new WOW().init();
+    </script>
+    <!--
+        "Contact" section
+    -->
+    <div id="contacts" class="bgimg">
+        <div class="wow slideInRight" data-wow-duration="1s">
+            <div class="ab-container">
+                <div class="welcome-text"><br>
+                    <h1 style="color: white;">Contact us</h1><br>
+                </div>
+                <p style="color: rgb(204, 204, 204); text-align: center;">For concerns,<br> you may use the form below to get in touch with us.<br> Kindly make sure to provide your valid and updated contact information.
+                    <br>We will endeavor to respond via call or email within 7 business days.</p>
+                <div class="forms">
+                    <!--
+                        Form for contacts
+                    -->
+                    <form style="color: rgb(231, 231, 231); text-align: center;">
+                        <label for="fname">First name: </label><br>
+                        <input type="text" id="fname" name="fname" placeholder="Type your first name" required><br>
+                        <label for="mname">Middle name: </label><br>
+                        <input type="text" id="mname" name="mname" placeholder="Type your Middle name" required><br>
+                        <label for="number">Contact number: </label><br>
+                        <input type="text" id="number" name="number" placeholder="Type your Contact number" required><br>
+                        <label for="email">Email: </label><br><input type="text" name="email" id="email" placeholder="Type your email" required><br>
+                        <button type="submit" style="text-align-last: center;" style="color:tomato">Submit</button>
+                    </form>
+                </div><br><br>
+            </div>
+        </div>
+    </div>
+    <!-- 
+        footer section 
+    -->
+    <div class="footer">
+        <div class="wow fadeInUp" data-wow-duration="3s">
+            <div class="inner-footer">
+                <div class="logo_container">
+                    <img src="assets/images/ABI.PNG" alt="logo1" height="60">
+                    <p>Copyright © 2021 All rights reserved</p>
+                </div>
+
+                <div class="footer-third">
+                    <h1>Main</h1>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-third">
+                    <h1>Banking</h1>
+                    <a href="./banking.html#dashboard">Dashboard</a>
+                    <a href="./banking.html#dashboard">Link Credit Card</a>
+                    <a href="./banking.html#faqs">FAQs</a>
+                </div>
+
+                <div class="footer-third">
+                    <form id="newsletter" action="action.php" method="post">
+                        <label>Subscribe to our newsletter:</label>
+                        <input type="text" placeholder="Enter email address">
+                    </form>
+                    <input class="forms w3-button w3-gray" type="button" style="color: white;" onclick="myFunction()" value="Enter">
+                    <!--
+                      This script has no real function currently and only aims to clear the textbox
+                    -->
+                    <script>
+                        function myFunction() {
+                            document.getElementById("newsletter").reset();
+                        }
+                    </script>
+                </div>
+            </div>
+</body>
+
+</html>

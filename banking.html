@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adamantium Banking, Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./styles/stylemain.css">
+    <link rel="stylesheet" type="text/css" href="./styles/mainauxiliary.css">
+    <link rel="stylesheet" type="text/css" href="./styles/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./styles/minidata.css">
+    <link rel="stylesheet" type="text/css" href="./styles/banking.css">
+    <link rel="stylesheet" type="text/css" href="./styles/animate.css">
+    <!--
+        Script for the Customer Support chat feature
+    -->
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "eaedb0c8-d913-403e-9d33-24bdcdc90455";
+        (function() {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</head>
+
+<body>
+    <!--Navigation Bar for 1st level-->
+    <div class="navbar-1st-level">
+        <a class="scroll" href="main.html">Main</a>
+        <a class="scroll" style="background-color: rgb(255, 255, 255); color: black;" href="banking.html">Banking</a>
+    </div>
+    <!--Navigation Bar for 2nd level-->
+    <div class="navbar">
+        <div class="abilogo">
+            <button>
+        <img src="assets/images/ABI.PNG" alt="logo1" height="30"></button>
+        </div>
+        <a class="scroll" href="#dashboard"><i class="fa fa-fw fa-book-reader"
+        style="margin: 10px; padding: 0px 20px"></i>Dashboard</a>
+        <a class="scroll" href="#link"><i class="fas fa-credit-card" style="margin: 10px; padding: 0px 5px"></i>Link Credit
+      Card</a>
+        <a class="scroll" href="#faq"><i class="fas fa-bookmark" style="margin: 10px; padding: 0px 5px"></i>FAQs</a>
+        <!--Login button-->
+        <div class="wow slideInRight fadeInRight" data-wow-duration="3s">
+            <div class="login button">
+                <lg-button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-user"></i> Login</button>
+            </div>
+            <div class="login button">
+                <lg-button onclick="document.getElementById('signup').style.display='block'" style="width:auto;"><i class="fas fa-user-circle"></i>Sign Up</button>
+            </div>
+            <script src="./scripts/main.js"></script>
+        </div>
+    </div>
+    </div>
+    <!--
+            Floating form of the login button, this only pops up when user clicks signup button
+    -->
+    <div id="id01" class="modal">
+        <form class="form animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" style="color: rgb(211, 59, 32);">&times;</span>
+            </div>
+
+            <div class="log-container">
+                <label for="uname" style="color: rgb(255, 255, 255);"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br>
+                <label for="psw" style="color: rgb(255, 255, 255);"> <b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <br><br><button type="submit" style="text-align-last: center;">Login</button>
+                <label style="color: rgb(255, 255, 255);">
+          <br><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            </div>
+
+            <div class="log-container ">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw" style="color: rgb(231, 231, 231);">Forgot <a href="#"
+            style="color: rgb(129, 144, 196);">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <!--
+        Signup section, this only pops up when user clicks signup button
+    -->
+    <div id="signup" class="modal">
+        <form class="form animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal" style="color: rgb(211, 59, 32);">&times;</span>
+            </div>
+            <div class="log-container">
+                <label for="su-uname" style="color: rgb(255, 255, 255);"><b>Username: </b></label>
+                <input type="text" placeholder="Enter Username" name="su-uname" required>
+                <br>
+                <label for="su-psw" style="color: rgb(255, 255, 255);"> <b>Password: </b></label>
+                <input type="password" placeholder="Enter Password" name="su-psw" required>
+
+                <label for="su-psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="su-psw-repeat" required>
+
+                <br><br><button type="submit" style="text-align-last: center;">Signup</button>
+                <label style="color: rgb(255, 255, 255);">
+          <br><input type="checkbox" checked="checked" name="su-remember"> Remember me</label>
+            </div>
+
+            <div class="log-container ">
+                <span class="psw"><a href="#" style="color: rgb(129, 144, 196);">Forgot password?</a></span><br><br>
+                <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <!--Dashboard section-->
+    <div id="dashboard" class="ab-container">
+        <div class="wow fadeInUp" data-wow-duration="3s">
+            <center>
+                <iframe src="./iframes/iframe.html" frameborder="1" style="padding: 20px;" width="400px" height="520px" style="background-color: rgb(250, 242, 228);">
+      </center>
+      </iframe><br><br><br><br>
+        </div>
+    </div>
+
+    <!--link credit card section-->
+    <div id="link" class="bggif">
+        <div class="wow slideInLeft fadeInLeft" data-wow-duration="3s">
+            <div class="ab-container"><br><br><br><br><br>
+                <center>
+                    <iframe src="./iframes/iframe-creditlink.html" frameborder="1" height="500" width="400"></iframe>
+                </center><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+
+    <!--faqs section-->
+    <div id="faq" class="faq-container">
+        <div class="wow pulse" data-wow-duration="1s">
+            <div class="ab-container">
+                <h2>Frequently Asked Questions</h2>
+                <button class="accordion">How do I register for an account?</button>
+                <div class="panel">
+                    <p>Click the login button and sign up from there.</p>
+                </div>
+
+                <button class="accordion">How do I link my credit/debit card?</button>
+                <div class="panel">
+                    <p>Link it.</p>
+                </div>
+
+                <button class="accordion">How long will the registration take?</button>
+                <div class="panel">
+                    <p>Not long.</p>
+                </div>
+
+                <button class="accordion">What are the different account balances I am seeing under the Balance Inquiry?</button>
+                <div class="panel">
+                    <p>USD and PHP.</p>
+                </div>
+
+                <button class="accordion">Who can signup and what types of accounts can be linked?</button>
+                <div class="panel">
+                    <p>Everyone. Credit card and Debit card.</p>
+                </div>
+
+                <button class="accordion">How can I unenroll from Adamantium Banking Services?</button>
+                <div class="panel">
+                    <p>No, do not unenroll.</p>
+                </div>
+
+                <button class="accordion">How safe is Adamantium Banking Services?</button>
+                <div class="panel">
+                    <p>It is very very safe.</p>
+                    <script src="scripts/banking.js"></script>
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+        <!-- 
+        footer section 
+        -->
+        <div class="footer">
+            <div class="wow fadeInUp" data-wow-duration="3s">
+                <div class="inner-footer">
+                    <div class="logo_container">
+                        <img src="assets/images/ABI.PNG" alt="logo1" height="60">
+                        <p>Copyright © 2021 All rights reserved</p>
+                    </div>
+
+                    <div class="footer-third">
+                        <h1>Main</h1>
+                        <a href="./main.html#home">Home</a>
+                        <a href="./main.html#about">About</a>
+                        <a href="./main.html#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-third">
+                        <h1>Banking</h1>
+                        <a href="#dashboard">Dashboard</a>
+                        <a href="#link">Link Credit Card</a>
+                        <a href="#faqs">FAQs</a>
+                    </div>
+
+                    <div class="footer-third">
+                        <form id="newsletter" action="action.php" method="post">
+                            <label>Subscribe to our newsletter:</label>
+                            <input type="text" placeholder="Enter email address">
+                        </form>
+                        <input class="forms w3-button w3-gray" type="button" style="color: white;" onclick="myFunction()" value="Enter">
+                        <!--
+                          This script has no real function currently and only aims to clear the textbox
+                        -->
+                        <script>
+                            function myFunction() {
+                                document.getElementById("newsletter").reset();
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+          This initializes or activates the script for the div animations
+        -->
+        <script src="./scripts/min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+</body>
+
+</html>
